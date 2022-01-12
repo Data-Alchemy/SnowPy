@@ -360,4 +360,4 @@ class SnowPipe():
                 if self.cleanup == True  :
                     os.remove(file)
 
-SnowPipe(org='hwlesra-retailpnimedia',usr='SYS_USER',pwd='5bf452afbaa43e8b57ed8058b2adf3fc',role="PROD_BRONZE_DB_ROOT",database="PROD_BRONZE_DB",schema="STAGING",warehouse="PROD_ANALYTICS_WH",cleanup=True).SnowPy("csv")
+SnowPipe(org='',usr='',pwd='',role="",database="",schema="",warehouse="",cleanup=True).SnowPy("csv")
