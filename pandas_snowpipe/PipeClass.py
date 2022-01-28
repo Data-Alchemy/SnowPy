@@ -92,8 +92,11 @@ class SnowPipe():
                     ''',remove_comments=True)
 
                     self.df_table_list = pd.DataFrame(self.table_cursor[-1])
-                    self.filter = self.df_table_list[1] == self.table_name
-                    self.df_table_list = self.df_table_list[self.filter]
+                    if self.df_table_list.empty:
+                        self.df_table_list
+                    else:
+                        self.filter =  self.df_table_list[1] == self.table_name
+                        self.df_table_list = self.df_table_list[self.filter]
 
                     if self.df_table_list.empty:
 
@@ -360,4 +363,4 @@ class SnowPipe():
                 if self.cleanup == True  :
                     os.remove(file)
 
-SnowPipe(org='',usr='',pwd='',role="",database="",schema="",warehouse="",cleanup=True).SnowPy("csv")
+SnowPipe(org='',usr='',pwd='',role="",database="",schema="",warehouse="",cleanup=False).SnowPy("csv")
