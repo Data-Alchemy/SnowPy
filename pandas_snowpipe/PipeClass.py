@@ -369,4 +369,4 @@ class SnowPipe():
                 if self.cleanup == True  :
                     os.remove(file)
 
-SnowPipe(org='xoa77688',usr='ZM_DEV_DEVOPS_ADMIN',pwd='8800a862064cabddd84a603d32689956',role="SNOWFLAKE_DEV_DATA_ENGINEERING",database="DEV_BRONZE_DB",schema="SANDBOX",warehouse="DEV_ELT_WH",cleanup=False).SnowPy("csv")
+SnowPipe(org='',usr='',pwd='',role="",database="",schema="",warehouse="",cleanup=False).SnowPy("csv")
